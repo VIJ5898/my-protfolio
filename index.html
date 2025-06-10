@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
+  />
+</head>
+<body>
+  <div id="nav" style="background-color: #FFFAF0;">
+    <h3 class="glow-name" style="margin-left: 60%;"><b>VIJAY </b>KUMAR K</h3>
+    <button id="add-popup-button" class="glow-btn" >HOME</button>
+  </div>
+  
+
+    <div class="popup-overlay"></div>
+    
+    <div class="popup-box">
+        <h2>KNOW MORE ABOUT ME</h2>
+        <form>
+            <button class="option-btn glow-btn" data-content="edu">EDUCATION</button><br/>
+            <button class="option-btn glow-btn" data-content="proj">PROJECTS</button><br/>
+            <button class="option-btn glow-btn" data-content="achi">ACHIEVEMENTS</button><br/>
+            <button class="option-btn glow-btn" data-content="certi">CERTIFICATIONS</button><br/>
+            <button class="option-btn glow-btn" data-content="extra">EXTRA CURRICULAR</button><br/>
+            <button class="option-btn glow-btn" data-content="interest">PERSONAL INTEREST</button><br/>
+            <button class="option-btn glow-btn" data-content="personal">PERSONAL INFORMATION</button><br/>
+            <button  class="glow-btn" id="cancel-popup">Cancel</button>
+            
+        </form>
+        <!-- <div id="description-box"></div> -->
+    </div>
+    <div id="description-popup" class="desc-popup" style="display: none;"></div>
+    <!-- <button class="add-button" id="add-popup-button">+</button> -->
+
+  <!-- Locomotive scroll container -->
+  <div id="main",class="main-content">
+    <div id="page">
+      <div id="loop">
+        <h1>
+          <b>WEB</b>DEVELOPER - <b><i>"Why do programmers </i></b> <span>prefer dark mode?</span>  Because light 
+          <span><i>attracts bugs."</i></span>
+        </h1>
+        <h1>
+          <b>CYBER</b>FICTION IS THE <b><i>REAL</i></b> <span>STORY</span> IN THE
+          <span><i>METAVERSE.</i></span>
+        </h1>
+        <h1>
+          <b>CYBER</b>FICTION IS THE <b><i>REAL</i></b> <span>STORY</span> IN THE
+          <span><i>METAVERSE.</i></span>
+        </h1>
+      </div>
+      
+    </div>
+    <div id="page1">
+      <div class="summary-box" id="right-text">
+        <h1  class="glow-heading" style="color:#708090; margin-left: 3%;">PROFESSIONAL SUMMARY</h1>
+        <h2 style="margin-left: 5%;">
+          Detail-oriented and self-driven <br />
+          engineer with a passion for cloud <br />
+          technologies, <br />
+          full-stack development, and DevOps <br />
+          practices.<br />
+          <br />
+          Adept at resolving <br />
+          complex technical issues in <br />
+          Linux-based environments with <br />
+          proven expertise in Java, <br />
+          Python, React, and <br />
+          modern databases<br />
+          like MySQL and <br />
+          MongoDB. <br />
+          <br />
+          
+          
+        </h2>
+      </div>
+      <div id="left-text">
+        <h1>
+          
+         
+        </h1>
+        <h3></h3>
+      </div>
+    </div>
+    <div id="page2">
+      <div class="summary-box" id="text1">
+        <h3></h3>
+        <h2 style="margin-left: 5%;">
+         Hands-on experience in CI/CD pipelines <br />
+          using Git and Jenkins, exposure <br />
+          to Agile software development,<br />
+          Apache web server, and <br />
+          automation frameworks. <br />
+          Known for a strong “can-do” attitude, <br />
+          excellent communication, and the ability <br />
+          to thrive in collaborative, <br />
+          fast-paced support teams.<br />
+        </h2>
+      </div>
+      <div class="summary-box" id="text2">
+        <br />
+        <br />
+        <h1  class="glow-heading" style="color:#708090; margin-left: 3%;">KEY EXPERTISE</h1>
+        <br />
+        <h2 style="margin-left: 5%;">
+            C#,C, C++, Javascript, Java, <br />
+            HTML-CSS, ReactJS, <br />
+            NodeJS, ExpressJS, MongoDB, SQL, <br />
+           OS, CN, DBMS, OOPS, DSA<br />
+        </h2>
+      </div>
+    </div>
+    <div id="page3">
+      <div class="summary-box" id="text3">
+        <h1 class="glow-heading" id="click-popup-button" >CLICK </h1>
+        <h3 style="margin-left: 5%;">
+          
+          <br />
+          TO  GET 
+          <br />
+          MORE INFORMATION
+          <br />
+          ABOUT ME!
+          <br />
+        </h3>
+      </div>
+    </div>
+    <!-- Place just before your footer -->
+<div style="
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  z-index: 1;">
+</div>
+   
+     <footer class="site-footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#" id="footer-home-link">Home</a>
+      <a href="#" id="about-popup-link">About</a>
+      <a href="#" id="about-contact-link" >Contact</a>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  
+
+
+  <!-- FIXED canvas outside main scrolling container -->
+  <canvas id="character-canvas"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
+ 
+
+</body>
+</html>
